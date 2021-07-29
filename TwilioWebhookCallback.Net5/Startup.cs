@@ -9,6 +9,7 @@ using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -31,6 +32,8 @@ namespace TwilioWebhookCallback.Net5
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "TwilioWebhookCallback.Net5", Version = "v1" });
+                var filePath = Path.Combine(System.AppContext.BaseDirectory, "TwilioWebhookCallback.Net5.xml");
+                c.IncludeXmlComments(filePath);
             });
         }
 

@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>TwilioWebhookCallback.Net5</name>
+    </assembly>
+    <members>
+        <member name="M:TwilioWebhookCallback.Net5.Controllers.CallBackController.Index(System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            This method is for receive SMS Status from Twilio
+            </summary>
+            <remarks>This method is for receive SMS Status from Twilio</remarks>
+            <param name="SmsSid">SmsSid message</param>
+            <param name="SmsStatus">Status message. For instance "sent"</param>
+            <param name="MessageStatus">For instance "sent"</param>
+            <param name="To">To phone number</param>
+            <param name="MessageSid">guid as parameter</param>
+            <param name="AccountSid">Twilio Account Sid</param>
+            <param name="From">From phone number</param>
+            <param name="ApiVersion">Page number - defaults to 0</param>
+            <response code="200">Handled</response>
+        </member>
+        <member name="M:TwilioWebhookCallback.Net5.Controllers.WebhookController.Index(Twilio.AspNet.Common.SmsRequest)">
+            <summary>
+            Return a Twilio empty response
+            </summary>
+            <remarks>
+            Return a basic Twilio Empty Response
+            </remarks>
+            <response code="200">Return a Twilio XML.</response> 
+        </member>
+    </members>
+</doc>
